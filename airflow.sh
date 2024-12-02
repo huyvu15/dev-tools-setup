@@ -28,7 +28,12 @@ airflow users create \
 
 airflow webserver -p 8080
 
-
 airflow scheduler
 
+# permissions write log 
+sudo chown -R ec2-user:ec2-user /home/ec2-user/airflow/logs
 
+# add rich = false in airflow.cfg
+
+# kill webserver
+kill -9 2727 8617 8618 8619 8628
